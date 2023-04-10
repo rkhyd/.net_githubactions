@@ -25,11 +25,13 @@ jobs:
         run: |
           echo Add other actions to biuld,
           echo test, and deploy your project.
+  
   build-api-app:
     needs: build
     runs-on: windows-latest
   
-  build-db
   packaging:
     needs: [build-app, build-api-app]
     runs-on: self-hosted
+
+  build-db:
